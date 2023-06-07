@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Park</h1>
+  <div class="col-md-6 offset-md-3">
+    <form action="/parks" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Park Name:</label>
+        <input class="form-control" type="text" name="park[title]" id="title" required>
+        <div class="valid-feedback">
+          Looks good
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location:</label>
+        <input class="form-control" type="text" name="park[location]" id="location" required>
+        <div class="valid-feedback">
+          Looks good
+        </div>
+      </div>
+      <!-- <input type="file" name="image" id="" multiple> -->
+      <!-- <div class="mb-3">
+        <label class="form-label" for="image">Image Url:</label>
+        <input class="form-control" type="text" name="park[image]" id="image" required>
+        <div class="valid-feedback">
+          Looks good
+        </div>
+      </div> -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input type="text" class="form-control" name="park[price]" id="price" placeholder="0.00" aria-label="Amount (to the nearest dollar)" aria-describedby="price-label" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description:</label>
+        <textarea class="form-control" type="text" name="park[description]" id="description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Add Images</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Park</button>
+        <a class="btn btn-secondary" href="/parks">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

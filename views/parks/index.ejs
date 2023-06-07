@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %>
+<div id="cluster-map"></div>
+<h1>All Parks</h1>
+<div>
+  <a class="btn btn-success mb-3" href="/parks/new">Add New Park</a>
+</div>
+<% for (let park of parks) { %>
+<div class="card mb-3">
+  <div class="row">
+    <div class="col-md-4">
+      <% if(park.images.length) { %>
+      <img src="<%- park.images[0].url %>" alt="" class="img-fluid" crossorigin>
+      <% } else { %>
+      <img src="https://res.cloudinary.com/djmmb03ds/image/upload/v1679817366/NatureExploro/iaj0ow6l8gczfy9ujg3y.png" alt="" class="img-fluid" crossorigin>
+      <% } %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= park.title %></h5>
+        <p class="card-text"><%= park.description %></p>
+        <p class="card-text">
+          <small class="text-muted"><%= park.location %></small>
+        </p>
+        <a href="/parks/<%= park.id %>" class="btn btn-success">View <%= park.title %></a>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<script>
+  const mapBoxToken = '<%-process.env.MAPBOX_Token%>';
+  const parks = {
+    features: <%- JSON.stringify(parks) %>
+  };
+</script>
+
+<script src="/javascripts/clusterMap.js"></script>

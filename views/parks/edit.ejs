@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">Edit Park</h1>
+  <div class="col-md-6 offset-md-3">
+    <form action="/parks/<%= park._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Park Name:</label>
+        <input class="form-control" type="text" name="park[title]" id="title" value="<%= park.title %>" required>
+        <div class="valid-feedback">
+          Looks good
+        </div>
+      </div>
+      <div class=" mb-3">
+        <label class="form-label" for="location">Location:</label>
+        <input class="form-control" type="text" name="park[location]" id="location" value="<%= park.location %>" required>
+        <div class="valid-feedback">
+          Looks good
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input type="text" class="form-control" name="park[price]" id="price" value="<%= park.price %>" placeholder="0.00" aria-label="Amount (to the nearest dollar)" aria-describedby="price-label">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description:</label>
+        <textarea class="form-control" type="text" name="park[description]" id="description"><%= park.description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Add Images</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <% park.images.forEach(function(img, i) { %>
+        <div>
+          <img src="<%= img.thumbnail %> " class="img-thumbnail" alt="" crossorigin>
+          <div class="form-check-inline">
+            <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= img.filename %>">
+          </div>
+          <label for="image-<%= i %>">Delete Image</label>
+        </div>
+        <% }) %>
+      </div>
+      <div class=" mb-3">
+        <button class="btn btn-success">Confirm Changes</button>
+        <a class="btn btn-secondary" href="/parks/<%= park._id %>">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
