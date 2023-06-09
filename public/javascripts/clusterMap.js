@@ -1,6 +1,6 @@
 mapboxgl.accessToken = mapBoxToken;
 
-console.log(parks);
+// console.log(parks);
 
 const map = new mapboxgl.Map({
     container: 'cluster-map',
