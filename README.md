@@ -27,10 +27,12 @@ Updated with a fail safe feature where a confirmation modal appears after the "D
 An intuitive introduction to the site.
 ![homePage](https://github.com/tobeseus/NatureExploro/assets/104329667/894a03b2-0f6b-4a87-bf50-25a60cd29f4b)
 
+---
 ## Parks Display Page
 A page that displays all the parks, with an interactive map to improve the user experience.
 ![indexParks](https://github.com/tobeseus/NatureExploro/assets/104329667/98d8bc7c-36e0-43ec-9a67-d659510839d5)
 
+---
 ## User Accounts
 The registration page for new users.
 ![registerPage](https://github.com/tobeseus/NatureExploro/assets/104329667/e8fd221f-883b-4c58-93eb-b23537fade11)
@@ -38,6 +40,7 @@ The registration page for new users.
 The login page for existing users.
 ![loginPage](https://github.com/tobeseus/NatureExploro/assets/104329667/c85d422c-3d9f-476e-9fa6-db005751dfb3)
 
+---
 ## CRUD
 ### Create
 The page used to create a new park.
@@ -56,10 +59,12 @@ The delete function of a park.
 ![deleteFeature](https://github.com/tobeseus/NatureExploro/assets/104329667/74750b7f-f238-442a-b56d-4ca6348fe22c)
 ![deleteParks](https://github.com/tobeseus/NatureExploro/assets/104329667/dd02d7f8-b37f-4c37-a60b-c897c8f146e8)
 
+---
 ## Review Feature
 Users can rate and describe their experiences at a park.
 ![reviewFeature](https://github.com/tobeseus/NatureExploro/assets/104329667/931621a6-fc2a-4073-919f-327fe8701cd8)
 
+---
 ## Authentication & Authorization
 A user must be signed in in order to rate and review parks.
 ![userFeature](https://github.com/tobeseus/NatureExploro/assets/104329667/4f2876ba-e5a3-4497-8522-9f97455a9e52)
@@ -70,4 +75,5 @@ A user cannot delete another user's review, nor can they edit or delete a park s
 A user will be prompted to sign in, if they try to add a new park, edit an existing park, or use any other user feature.
 ![signinPrompt](https://github.com/tobeseus/NatureExploro/assets/104329667/d85fefbb-f566-4960-8e79-8c23830947f0)
 
+---
 ### This is what makes NatureExploro :)
